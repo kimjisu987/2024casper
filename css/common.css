@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* common.css - header, footer 서식 */
+
+/* 헤더 */
+header{
+  position: fixed;
+  width: 100%; height: 70px;
+  z-index: 1000;
+}
+header > h1{
+  padding: 24px 0px 0px 2%;
+}
+
+/* 내비게이션 */
+.gnb{
+  width: 600px;
+  margin: -24px auto 0 auto;
+}
+.gnb > ul{
+  display: flex;
+  justify-content: space-around;
+}
+.gnb > ul > li > a{
+  color: var(--m_bg_color);
+  font-size: 1.2rem;
+}
+.gnb > ul > li > a:hover{
+  text-decoration: underline;
+}
+header i.fas{
+  color:var(--m_bg_color);
+  position: absolute; top: 22px;
+  font-size: 1.6rem;
+}
+.fa-user{right:5%;}
+.fa-bell{right:2%;}
+
+/* m_navi */
+#m_navi{
+  position: fixed; top: 42%; right: 20px;
+  z-index: 1000;
+  width: 10px; height: 160px;
+}
+#m_navi > ul{
+  position: relative;
+}
+#m_navi > ul > li{
+  /* position: absolute; right: 0px; */
+  width: 40px; height: 40px;
+  border-radius: 40px;
+  line-height: 40px;
+  transition: 0.5s;
+  background: #97a5b6;
+  margin-bottom: 10px;
+  transform: translateX(-100%);
+  overflow: hidden;
+}
+#m_navi > ul > li:hover{width: 200px;}
+/* #m_navi > ul > li:nth-child(1){}
+#m_navi > ul > li:nth-child(2){top: 45px;}
+#m_navi > ul > li:nth-child(3){top: 92px;}
+#m_navi > ul > li:nth-child(4){top: 140px;}
+#m_navi > ul > li:nth-child(5){top: 185px;} */
+#m_navi > ul > li > span{
+  display: inline-block;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--s_color2);
+  color: var(--m_bg_color);
+  text-align: center;
+  font-weight: bold;
+  /* transform: translateY(-2px); */
+}
+#m_navi > ul > li:hover > span{
+  background: var(--s_color1);
+}
+#m_navi > ul > li > a{
+  color: var(--m_bg_color);
+  font-size: var(--f_size2);
+  line-height: 160%;
+  padding-left: 30px;
+}
+
+/* 푸터 */
+footer{
+  background: var(--f_color1);
+  padding-block: 40px;
+  height: 100px;
+}
+.f_inner{
+  width: 1200px;
+  margin: 0 auto;
+}
+footer h2{
+  float: left;
+  padding-top: 10px;
+  width: 150px; height: 40px;
+}
+.f_lnb, address{float: left;}
+address{
+  clear: left;
+  padding-left: 170px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--m_bg_color);
+}
+address dt, address dd{
+  display: inline-block;
+}
+.f_lnb > ul{
+  display: flex;
+  padding-top: 15px;
+}
+.f_lnb a{
+  color: #bbbbbb;
+  padding-inline: 20px;
+  border-right: 1px solid #5d5d5d;
+}
+.f_lnb li:nth-child(2) a{
+  color: var(--m_bg_color);
+}
+.f_lnb li:last-child a{border: none;}

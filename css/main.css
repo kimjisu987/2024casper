@@ -1,0 +1,337 @@
+@charset "utf-8";
+/* main.css */
+
+main a{color: inherit;}
+/* 1. 비주얼 이미지 */
+#intro_m{
+  width: 100%; height: 100vh;
+  overflow: hidden;
+}
+#intro_m article{
+  position: absolute;
+  width: 100%;
+  top: 26%;
+  z-index: 100;
+  text-align: center;
+  color: var(--m_bg_color);
+  font-size: var(--f_size2);
+}
+#intro_m article p{line-height: 80px;}
+#intro_m article a{
+  font-size: var(--f_size1);
+  text-decoration: underline;
+  padding: 5px 10px;
+}
+#intro_m article a:first-of-type{
+  background: var(--s_color1);
+  padding: 5px 10px;  
+}
+.next_page{
+  width: 30px; height: 30px;
+  border-left: 1px solid var(--m_bg_color);
+  border-bottom: 1px solid var(--m_bg_color);
+  position: absolute; bottom: 40px; left: 50%;
+  z-index: 1001;
+  transform: rotate(-45deg);
+}
+
+/* section 공통 제목 서식 */
+.sec_title{
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  /* padding-bottom: 20px; */
+}
+.sec_title2{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.p01{
+  font-size: var(--f_size2);
+  text-align: center;
+  line-height: 50px;
+}
+
+/* 각 section 여백 설정 */
+#top3, .event_promo, #buy_info, #cs{
+  margin: 150px auto;
+  width: 1200px;
+}
+
+/* top3 콘텐츠 서식 */
+#top3{text-align: center; overflow: hidden;}
+.top3{
+  position: relative;
+  margin-top: 50px;
+  padding-block: 20px 50px;
+}
+.top3 .swiper-wrapper{width: 100%; height: 100%;}
+.rank{
+  color: var(--s_color3);
+  border: 1px solid var(--s_color3);
+  padding: 6px 30px;
+  border-radius: 20px;
+  font-size: var(--f_size1);
+}
+.top3_title{
+  font-size: 26px;
+  font-weight: 500;
+  padding-top: 30px;
+  color: var(--s_color1);
+}
+.top3 img{
+  padding-block: 80px;
+  width: 400px;
+  transition: 1s;
+}
+.top3 .swiper-slide-active img{
+  transform: scale(1.5);
+}
+.top3 .detail{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+.top3 .detail li{
+  width: 190px;
+  border-right: 1px solid var(--s_color4);
+  padding-inline: 20px;
+  font-size: var(--f_size2);
+  line-height: 20px;
+  text-align: left;
+}
+.top3 .detail li:last-child{
+  border-right: none;
+  color: var(--s_color1);
+  align-self: center;
+}
+.top3 .price{
+  font-size: 32px;
+  font-weight: bold;
+}
+/* 색상 박스 */
+.outer_color, .inner_color{
+  display: inline-block;
+  float: left;
+  width: 56px; height: 40px;
+  text-indent: -9999px;
+  margin-right: 10px;
+  border: 1px solid var(--s_color4);
+}
+.kaki{background: #4d503b;}
+.black{background: #000;}
+.gray{background: gray;}
+.d_gray{background: #464646;}
+.top3 .swiper-button-prev, .top3 .swiper-button-next{
+  color: var(--f_color1);
+  font-weight: bold;
+}
+.top3 .swiper-pagination-bullet{
+  width: 50px;
+  height: 6px;
+  background: var(--f_color1);
+}
+
+/* 버튼 공통서식 */
+.btn{
+  border: 1px solid #333;
+  background: var(--m_bg_color);
+  padding: 8px 26px;
+}
+
+/* 3. 소개 intro */
+#intro{
+  position: relative;
+  height: 860px;
+  overflow: hidden;
+  text-align: center;
+}
+#intro .sec_title2{
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  z-index: 100;
+}
+#intro video{
+  /* width: 100%; */
+  position: relative;
+  top: -100px;
+}
+.intro_title_left, .intro_title_right{
+  position: absolute;
+  z-index: 100;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px;
+}
+@keyframes ani1{
+  0%{opacity: 0;}
+  70%{opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes ani2{
+  0%{opacity: 0;}
+  90%{opacity: 0;}
+  100%{opacity: 1;}
+}
+.intro_title_left{
+  animation: ani1 5s;
+  top: 200px; left: 130px;
+  text-align: left;
+}
+.intro_title_right{
+  animation: ani2 5s;
+  bottom: 200px; right: 150px;
+  text-align: right;
+}
+#intro .btn{
+  position: absolute;
+  z-index: 100;
+  bottom: 60px; left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 4. 시승신청 */
+.test_drive{
+  text-align: center;
+  padding-top: 100px
+}
+.test_drive article{
+  width: 430px; height: 290px;
+  padding: 15px;
+  margin-top: 50px;
+  border: 1px solid var(--s_color4);
+  display: inline-block;
+  vertical-align: top;
+}
+.test_drive article h3{
+  font-size: 24px;
+  padding-top: 20px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.test_drive article p{
+  font-size: var(--f_size1);
+  line-height: 20px;
+  padding-block: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.test_drive .test_d_p{
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  transform: translateY(25px);
+}
+.test_drive_r .test_d_p{transform: translateY(66px);}
+.test_drive_l{margin-right: 30px;}
+.test_d_btn1{
+  background: var(--s_color2);
+  color: var(--m_bg_color);
+  line-height: 30px;
+  padding: 10px 60px;
+}
+.test_d_btn2{
+  display: inline-block;
+  width: 180px;
+  /* margin-inline: calc(100% - 180px / 0.5); */
+  margin-inline: 125px;
+  line-height: 40px;
+  color: var(--s_color3);
+}
+.p_color{color: initial;}
+
+/* 5. 이벤트 프로모션 */
+.event_promo{
+  width: 100%; height: 450px;
+  background: #eee;
+  padding-block: 60px 80px;
+}
+.event_promo .event{
+  position: relative;
+  width: 1200px; height: 360px;
+  margin: 30px auto 0px auto;
+  overflow: hidden;
+}
+.event .swiper-button-prev, .event .swiper-button-next{
+  transform: translateY(-35px);
+  color: var(--m_bg_color);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+}
+.event .swiper-pagination-bullet{
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.event .swiper-pagination-bullet-active{
+  width: 100px;
+  border-radius: 15px;
+  background: var(--s_color1);
+}
+
+/* 6. 캐스퍼 구매 안내 */
+.buy_info{
+  width: 1200px; margin: 0 auto;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.buy_info h3{
+  font-size: 24px;
+  padding-block: 60px;
+  font-weight: 900;
+}
+.buy_info .p01{font-size: 12px;}
+.buy_info .t_color{color: var(--s_color1);}
+.buy_info ul{
+  width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 50px 60px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  margin-block: 30px 50px;
+}
+.buy_info ul h4{font-size: 16px; font-weight: bold;}
+.buy_info ul img{width: 70px; padding-block: 15px;}
+.buy_info ul p{font-size: 12px; line-height: 20px; word-break: keep-all;}
+
+
+/* 모달 서식 */
+.modal{
+  position: fixed; top: 0px;
+  width: 100%; height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1002;
+}
+.modal_inner{
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal_bottom{
+  width: 450px; height: 50px;
+  background: #fff;
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin-top: -2px;
+  overflow: hidden;
+}
+.modal label{
+  line-height: 50px;
+  font-size: var(--f_size1);
+  padding-left: 5px;
+}
+.modal input[type="checkbox"]{
+  width: 20px; height: 20px;
+  position: relative;
+  transform: translateY(5px);
+  accent-color: var(--s_color1);
+}
+.modal input[type="button"]{
+  float: right;
+  border: none;
+  background: var(--s_color1);
+  color: var(--m_bg_color);
+  padding: 16.5px 30px;
+  cursor: pointer;
+}

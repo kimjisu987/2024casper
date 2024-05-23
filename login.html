@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인</title>
+  <!-- 초기화 서식 -->
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <!-- 기본 서식 -->
+  <link rel="stylesheet" type="text/css" href="./css/base.css">
+  <!-- 공통 서식 -->
+  <link rel="stylesheet" type="text/css" href="./css/common.css">
+  <!-- 아이콘폰트 서식 (폰트어썸) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    header{
+      position: static;
+      background: var(--m_bg_color);
+    }
+    .gnb > ul > li > a{color: var(--f_color1);}
+    header i.fas{color: var(--f_color1);}
+    form{
+      width: 100%;
+      background: #eee;
+      padding-block: 100px 50px;
+    }
+    fieldset{
+      width: 360px;
+      border: none;
+      padding: 100px 80px;
+      margin: 0 auto;
+    }
+    fieldset legend{display: none;}
+    fieldset input[type="text"], fieldset input[type="password"], fieldset input[type="submit"]{
+      width: 100%; height: 50px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    fieldset h1{text-align: center; margin-bottom: 50px;}
+    fieldset input[type="text"], fieldset input[type="password"]{
+      text-indent: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0px 0px 3px #ccc;
+      outline-color: #215499;
+      margin-bottom: 15px;
+    }
+    fieldset input[type="checkbox"]{accent-color: #215489;}
+    fieldset input[type="submit"]{
+      background: #215499;
+      border: 1px solid #215499;
+      color: #fff;
+      margin-top: 50px;
+    }
+    fieldset a{text-decoration: none; color: #333; font-size: 14px;}
+    fieldset a:hover{text-decoration: underline;}
+    fieldset p:first-of-type label, fieldset p:nth-of-type(2) label{display: none;}
+    fieldset p:last-of-type, p:nth-of-type(3) label{font-size: 14px;}
+    fieldset p:last-of-type{margin: 0 auto; text-align: center; padding-top: 15px;}
+    fieldset p:last-of-type a{padding-inline: 20px;}
+    fieldset p:last-of-type a:not(:last-child){border-right: 1px solid #333;}
+
+  </style>
+</head>
+<body>
+  <!-- 상단 헤더 영역 -->
+  <header>
+    <!-- 상단 좌측 로고 -->
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">
+        <img src="./images/logo-casper_black.png" alt="캐스퍼로고">
+      </a>
+    </h1>
+
+    <!-- 내비게이션 -->
+    <nav class="gnb">
+      <ul>
+        <li><a href="#" title="소개">소개</a></li>
+        <li><a href="#" title="체험">체험</a></li>
+        <li><a href="#" title="이벤트">이벤트</a></li>
+        <li><a href="#" title="구매">구매</a></li>
+        <li><a href="#" title="고객지원">고객지원</a></li>
+      </ul>
+    </nav>
+
+    <!-- 상단 우측 아이콘 -->
+    <a href="login.html"><i class="fas fa-user"></i></a>
+    <i class="fas fa-bell"></i>
+  </header>
+
+  <!-- 폼 태그 -->
+  <form name="login">
+    <fieldset>
+      <legend>로그인 폼</legend>
+      <h1><img src="https://d3337ehzyte0uu.cloudfront.net/static/media/hyundai_logo.png" alt="현대로고" width="200"></h1>
+      <p>
+        <label for="id_txt">아이디 </label>
+        <input type="text" maxlength="16" id="id_txt" name="id_txt" placeholder="아이디를 입력해주세요." autocomplete="off" autofocus>
+        <!--  autocomplete="off" 자동완성기능 off -->
+      </p>
+      <p>
+        <label for="pw_txt">비밀번호 </label>
+        <input type="password" maxlength="16" id="pw_txt" name="pw_txt" placeholder="비밀번호를 입력해주세요." autocomplete="off">
+      </p>
+      <p>
+        <input type="checkbox" id="id_save">
+        <label for="id_save">아이디 저장</label>
+      </p>
+      <p>
+        <input type="submit" id="login_btn" value="로그인">
+      </p>
+      <p>
+        <a href="#" title="아이디 찾기">아이디 찾기</a>
+        <a href="#" title="비밀번호 찾기">비밀번호 찾기</a>
+        <a href="#" title="회원가입">회원가입</a>
+      </p>
+    </fieldset>
+  </form>
+  
+  <!-- 하단 푸터 영역 -->
+  <footer>
+    <div class="f_inner">
+      <h2>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo-hyundai.a9ebdc6.png" alt="하단로고">
+        </a>
+      </h2>
+
+      <nav class="f_lnb">
+        <ul>
+          <li><a href="#" title="이용약관">이용약관</a></li>
+          <li><a href="#" title="개인정보 처리방침">개인정보 처리방침</a></li>
+          <li><a href="#" title="저작권안내">저작권안내</a></li>
+          <li><a href="#" title="공동인증서 안내">공동인증서 안내</a></li>
+          <li><a href="#" title="현대자동차 홈페이지">현대자동차 홈페이지</a></li>
+        </ul>
+      </nav>
+
+      <address>
+        <dl>
+          <dt>사업자등록번호 :</dt>
+          <dd>101-00-00000</dd>
+          <dt>통신판매업신고번호 :</dt>
+          <dd>2022-012345</dd>
+          <dt>대표이사 :</dt>
+          <dd>장재훈</dd>
+          <dt>주소 :</dt>
+          <dd>서울시 서초구 헌릉로 12 호스팅 서비스 제공 : 현대오토에버(주)</dd>
+        </dl>
+        <p>copyright&copy; 2024 hyundai motor company, all rights reserved.</p>
+      </address>
+    </div>
+  </footer>
+
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      let key = getCookie('idChk');    // 쿠키 이름 저장 (idChk-정해진거 아님-맘대로~)
+
+      // 쿠키에 아이디 저장이 되어 체크박스에 체크되는 스크립트
+      if(key!=""){   // key 변수에 값이 none이 아니라면(!=) == 있다면
+        $('#id_txt').val(key);    // id_txt value에 있는 id값을 저장
+      }
+      if($('#id_txt').val() !=""){    // 쿠키에 id 값이 none이 아니라면(!=) == 있다면
+        $('#id_save').attr('checked',true);   // 체크박스에 체크를 해둔다.
+      }
+
+      // 체크박스에 체크해서 쿠키를 생성하거나 체크하지 않아 쿠키가 생성되지 않는 스크립트
+      $('#id_save').change(function(){   // 체크박스의 상태가 변경되면 아래 내용 실행
+        if($('#id_save').is(':checked')){   // 체크박스에 체크가 된 경우라면
+          setCookie('idChk',$('#id_txt').val(), 7);   // 쿠키를 생성하고
+        } else{   //그렇지 않으면
+          deleteCookie('idChk');    // 쿠키를 삭제한다.
+        }
+      });
+      $('#id_txt').keyup(function(){    // 아이디 입력창에 키를 눌렀응ㄹ 경우
+        if($('#id_save').is(':checked')){   // 체크박스에 체크가 된 경우라면
+          setCookie('idChk', $('#id_txt').val(), 7);   // 쿠키를 생성한다.
+        }
+      })
+
+    });
+  
+    // 쿠키 관련 스크립트
+    function setCookie(cookieName, value, exdays){
+      var exdate = new Date();
+      exdate.setDate(exdate.getDate() + exdays);
+      var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString());
+      document.cookie = cookieName + "=" + cookieValue;
+    }
+        
+    function deleteCookie(cookieName){
+      var expireDate = new Date();
+      expireDate.setDate(expireDate.getDate() - 1);
+      document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
+    }
+          
+    function getCookie(cookieName) {
+      cookieName = cookieName + '=';
+      var cookieData = document.cookie;
+      var start = cookieData.indexOf(cookieName);
+      var cookieValue = '';
+      if(start != -1){
+        start += cookieName.length;
+        var end = cookieData.indexOf(';', start);
+        if(end == -1)end = cookieData.length;
+        cookieValue = cookieData.substring(start, end);
+      }
+      return unescape(cookieValue);
+    }
+
+  </script>
+
+</body>
+</html>

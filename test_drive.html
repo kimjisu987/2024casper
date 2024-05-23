@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시승신청 예약</title>
+  <!-- 초기화 서식 -->
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <!-- 기본 서식 -->
+  <link rel="stylesheet" type="text/css" href="./css/base.css">
+  <!-- 공통 서식 -->
+  <link rel="stylesheet" type="text/css" href="./css/common.css">
+  <!-- 아이콘폰트 서식 (폰트어썸) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- 서브페이지 서식 -->  
+  <style>
+    header{
+      position: static;
+      background: var(--m_bg_color);
+    }
+    .gnb > ul > li > a{color: var(--f_color1);}
+    header i.fas{color: var(--f_color1);}
+
+    .sub_top{
+      background: url('./images/test_driving_img.jpg') 100%;
+      background-size: cover;
+      width: 100%; height: 300px;
+      position: relative;
+      color: var(--m_bg_color);
+      text-align: center;
+    }
+    .sub_top h1{
+      position: absolute;
+      width: 100%;
+      top: 35%;
+      font-size: 44px;
+    }
+    .sub_top p{
+      position: absolute;
+      width: 100%;
+      top: 55%;
+      font-size: var(--f_color1);
+    }
+
+    section{width: 400px; margin: 80px auto 70px auto;}
+    section h2{font-size: 24px; font-weight: bold; text-align: center; margin-block: 40px;}
+    fieldset legend{display: none;}
+    fieldset p{
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--f_size1);
+      color: var(--f_color1);
+      margin-bottom: 20px;
+      align-items: center;
+    }
+    fieldset input{outline-color: var(--s_color1);}
+    fieldset select:focus-visible{outline-color: var(--s_color1);}
+    fieldset input[type="text"], fieldset input[type="email"], fieldset select, fieldset input[type="date"]{
+      width: 290px; height: 36px;
+      box-sizing: border-box;
+    }
+    fieldset input[type="text"], fieldset input[type="email"], fieldset select{text-indent: 10px;}
+    fieldset input[type="date"]{text-indent: 5px;}
+    fieldset input[type="radio"]{accent-color: var(--s_color1);}
+    fieldset p:nth-of-type(3){justify-content: flex-start; margin-bottom: 25px;}
+    fieldset p:nth-of-type(3) input{margin-left: 23px;}
+    fieldset input[type="submit"], fieldset input[type="reset"]{
+      width: 190px; height: 40px;
+      border: none;
+      background: var(--s_color1);
+      color: var(--m_bg_color);
+      margin-top: 20px;
+    }
+    fieldset input[type="reset"]{background: var(--f_color1);}
+  </style>
+</head>
+<body>
+  <!-- 상단 헤더 영역 -->
+  <header>
+    <!-- 상단 좌측 로고 -->
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">
+        <img src="./images/logo-casper_black.png" alt="캐스퍼로고">
+      </a>
+    </h1>
+
+    <!-- 내비게이션 -->
+    <nav class="gnb">
+      <ul>
+        <li><a href="#" title="소개">소개</a></li>
+        <li><a href="#" title="체험">체험</a></li>
+        <li><a href="#" title="이벤트">이벤트</a></li>
+        <li><a href="#" title="구매">구매</a></li>
+        <li><a href="#" title="고객지원">고객지원</a></li>
+      </ul>
+    </nav>
+
+    <!-- 상단 우측 아이콘 -->
+    <a href="login.html"><i class="fas fa-user"></i></a>
+    <i class="fas fa-bell"></i>
+  </header>
+
+  <!-- 메인 콘텐츠 영역 -->
+  <main>
+    <div class="sub_top">
+      <h1>시승 신청</h1>
+      <p>캐스퍼가 제공하는 편리한 시승 서비스를 이용해보세요.</p>
+    </div>
+    <section>
+      <h2>시승신청 온라인 예약</h2>
+      <form name="시승신청" method="post" action="db_insert.php">
+        <fieldset>
+          <legend>시승신청 온라인 예약</legend>
+          <!-- required : 필수입력 -->
+          <p><label for="name">고객명 </label><input type="text" name="name" id="name" required placeholder="성함을 입력하세요." autofocus></p>
+          <p><label for="phone">연락처 </label><input type="text" name="name" id="phone" required placeholder="연락처를 입력하세요."></p>
+          <p>SMS 수신 여부 
+            <input type="radio" name="sms" id="s01" value="Y">
+            <label for="s01">수신</label>
+            <input type="radio" name="sms" id="s02" value="N">
+            <label for="s02">수신안함</label>
+          </p>
+          <p><label for="email">이메일 주소 </label><input type="email" name="email" required placeholder="이메일 주소를 입력하세요."></p>
+          <p>
+            <label for="region">전시장 선택 </label>
+            <select name="region" id="region" required>
+              <option value="">전시장 선택</option>
+              <option value="강남점">강남점</option>
+              <option value="송파점">송파점</option>
+              <option value="한남점">한남점</option>
+            </select>
+          </p>
+          <p>
+            <label for="car">차량 선택 </label>
+            <select name="car" id="car" required>
+              <option value="">차량 선택</option>
+              <option value="캐스퍼">캐스퍼</option>
+              <option value="캐스퍼 인스퍼레이션">캐스퍼 인스퍼레이션</option>
+              <option value="소나타">소나타</option>
+              <option value="그랜저">그랜저</option>
+              <option value="제네시스">제네시스</option>
+            </select>
+          </p>
+          <p><label for="my_car">보유 차종 </label><input type="text" name="my_car" required placeholder="보유하신 차종을 입력하세요."></p>
+          <p><label for="e_date">시승희망일 </label><input type="date" name="e_date" required></p>
+          <p>
+            <input type="submit" value="예약하기">
+            <input type="reset" value="취소하기">
+          </p>
+        </fieldset>
+
+      </form>
+    </section>
+  </main>
+  
+  <!-- 하단 푸터 영역 -->
+  <footer>
+    <div class="f_inner">
+      <h2>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo-hyundai.a9ebdc6.png" alt="하단로고">
+        </a>
+      </h2>
+
+      <nav class="f_lnb">
+        <ul>
+          <li><a href="#" title="이용약관">이용약관</a></li>
+          <li><a href="#" title="개인정보 처리방침">개인정보 처리방침</a></li>
+          <li><a href="#" title="저작권안내">저작권안내</a></li>
+          <li><a href="#" title="공동인증서 안내">공동인증서 안내</a></li>
+          <li><a href="#" title="현대자동차 홈페이지">현대자동차 홈페이지</a></li>
+        </ul>
+      </nav>
+
+      <address>
+        <dl>
+          <dt>사업자등록번호 :</dt>
+          <dd>101-00-00000</dd>
+          <dt>통신판매업신고번호 :</dt>
+          <dd>2022-012345</dd>
+          <dt>대표이사 :</dt>
+          <dd>장재훈</dd>
+          <dt>주소 :</dt>
+          <dd>서울시 서초구 헌릉로 12 호스팅 서비스 제공 : 현대오토에버(주)</dd>
+        </dl>
+        <p>copyright&copy; 2024 hyundai motor company, all rights reserved.</p>
+      </address>
+    </div>
+  </footer>
+
+</body>
+</html>
