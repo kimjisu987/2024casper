@@ -1,15 +1,25 @@
 @charset "utf-8";
 /* common.css - header, footer 서식 */
 
+/* html, body{scroll-behavior: smooth;} */
+
 /* 헤더 */
 header{
-  position: fixed;
+  position: absolute;
   width: 100%; height: 70px;
   z-index: 1000;
 }
 header > h1{
   padding: 24px 0px 0px 2%;
 }
+
+/* 스크롤시 헤더 배경에 넣을 서식 */
+.h_act{
+  position: fixed; top: 0px; left: 0px;
+  z-index: 3000;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+.h_act a, .h_act i{color: var(--f_color1) !important;}
 
 /* 내비게이션 */
 .gnb{
@@ -78,7 +88,7 @@ header i.fas{
   color: var(--m_bg_color);
   font-size: var(--f_size2);
   line-height: 160%;
-  padding-left: 30px;
+  padding-inline: 30px 50px;
 }
 
 /* 푸터 */

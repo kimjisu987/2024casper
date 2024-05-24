@@ -166,6 +166,9 @@ main a{color: inherit;}
   font-weight: 500;
   line-height: 40px;
 }
+/* 애니메이션 한 번만 적용시 */
+/* .act1{animation: ani1 4s forwards;}
+.act2{animation: ani2 4s forwards;} */
 @keyframes ani1{
   0%{opacity: 0;}
   70%{opacity: 0;}
@@ -173,17 +176,17 @@ main a{color: inherit;}
 }
 @keyframes ani2{
   0%{opacity: 0;}
-  90%{opacity: 0;}
+  80%{opacity: 0;}
   100%{opacity: 1;}
 }
 .intro_title_left{
-  animation: ani1 5s;
-  top: 200px; left: 130px;
+  animation: ani1 5s infinite;
+  top: 200px; left: 300px;
   text-align: left;
 }
 .intro_title_right{
-  animation: ani2 5s;
-  bottom: 200px; right: 150px;
+  animation: ani2 5s infinite;
+  bottom: 200px; right: 300px;
   text-align: right;
 }
 #intro .btn{
@@ -246,7 +249,7 @@ main a{color: inherit;}
 .event_promo{
   width: 100%; height: 450px;
   background: #eee;
-  padding-block: 60px 80px;
+  padding-block: 60px;
 }
 .event_promo .event{
   position: relative;
@@ -275,6 +278,7 @@ main a{color: inherit;}
   width: 1200px; margin: 0 auto;
   text-align: center;
   margin-bottom: 100px;
+  padding-top: 80px;
 }
 .buy_info h3{
   font-size: 24px;
@@ -415,7 +419,6 @@ main a{color: inherit;}
   text-align: center;
   margin-block: -20px;
 }
-
 
 /* 모달 서식 */
 .modal{
