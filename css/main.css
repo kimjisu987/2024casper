@@ -296,6 +296,126 @@ main a{color: inherit;}
 .buy_info ul img{width: 70px; padding-block: 15px;}
 .buy_info ul p{font-size: 12px; line-height: 20px; word-break: keep-all;}
 
+/* 7. 고객지원 */
+.cs{
+  width: 100%;
+  background: #eee;
+  padding-block: 60px 80px;
+}
+.cs > h2{margin-bottom: 60px;}
+.cs > article{padding-block: 40px 40px;}
+.cs > article, .cs > ul, .cs > div{
+  width: 1200px; margin: 20px auto;
+  background: var(--m_bg_color);
+}
+.cs > ul{
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  gap: 20px;
+}
+.cs > ul > li{
+  background: var(--m_bg_color);
+  flex-grow: 1;
+}
+.cs > article > h3{
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.ars_left, .ars_right{
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  width: 50%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  float: left;
+}
+.ars_left{
+  border-right: 1px solid #ddd;
+}
+.ars_left p, .ars_right p{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  line-height: 30px;
+}
+.cs a{
+  color: var(--s_color3);
+  font-weight: bold;
+}
+.cs strong{
+  font-size: var(--f_size2);
+  font-weight: 500;
+}
+.cs .car_icon{
+  background: url('../images/bg-support-ars.png');
+  display: inline-block;
+  width: 80px; height: 46px;
+  text-indent: -9999px;
+  margin-top: 30px;
+}
+.cs dl{line-height: 24px;flex-grow: 1;}
+.cs dl > dt{font-weight: bold;}
+.cs dl > dd{color: var(--f_color1);}
+.ars_left .car_icon{transform: translateY(30px);}
+.ars_right .car_icon{
+  background-position: -88px 0px;
+  width: 62px; height: 46px;
+}
+
+/* 플로트 속성 해제 - 부모박스에 클래스 추가
+플로트 속성 넣었을 때, 부모 높이값을 잃었을 때 사용 */
+.clearfix::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/* cs_etc 고객지원 아래 4개 박스 서식 */
+.cs_etc{align-content: space-between;}
+.cs_etc > li{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+}
+/* .cs_etc > li > *{flex: 1 1 0;} */
+.cs_etc > li > h3{
+  font-size: 18px; font-weight: bold;
+  line-height: 50px;
+}
+.cs_etc > li > p{line-height: 20px;}
+.cs_etc > li > p:nth-child(2){font-weight: bold;}
+.cs_etc > li > a{line-height: 50px;}
+.cs_etc > li .cs_btn{
+  display: inline-block;
+  width: 120px;
+  background: var(--s_color2);
+  color: var(--m_bg_color);
+  line-height: 160%;
+  padding: 10px 15px;
+  text-align: center;
+  margin: auto auto 0 auto;
+}
+.cs_etc > li:last-child{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cs_etc > li:last-child > a:nth-of-type(1){
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+.cs_etc > li:last-child > a:nth-of-type(2), .cs_etc > li:last-child > a:nth-of-type(3){
+  width: 50%;
+  text-align: center;
+  margin-block: -20px;
+}
+
 
 /* 모달 서식 */
 .modal{

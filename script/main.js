@@ -1,6 +1,6 @@
 // main.js
 
-// 모달 스크립트
+// 모달
 $(document).ready(function(){
   let modal = `
   <div class="modal">
@@ -35,3 +35,9 @@ $(document).ready(function(){
     close_popup();
   })
 });
+
+// 랜덤 광고배너
+let r_num = Math.floor(Math.random()*8)+1;
+document.write(r_num);    // 1~8 랜덤숫자 부여받음
+document.getElementById('r_banner_img').src='./images/random_banner'+r_num+'.jpg';
+console.log(r_num);
