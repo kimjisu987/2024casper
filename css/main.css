@@ -303,7 +303,7 @@ main a{color: inherit;}
   padding-block: 60px 80px;
 }
 .cs > h2{margin-bottom: 60px;}
-.cs > article{padding-block: 40px 40px;}
+.cs > article{padding-block: 40px 20px;}
 .cs > article, .cs > ul, .cs > div{
   width: 1200px; margin: 20px auto;
   background: var(--m_bg_color);
@@ -356,7 +356,7 @@ main a{color: inherit;}
   display: inline-block;
   width: 80px; height: 46px;
   text-indent: -9999px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .cs dl{line-height: 24px;flex-grow: 1;}
 .cs dl > dt{font-weight: bold;}
